@@ -1,0 +1,40 @@
+#PrintScreen Region
+
+Print
+    maim -s | xclip -selection clipboard -t image/png
+
+super+Print
+    screenshot_full.sh
+
+alt+shift+F12
+    toggle_compositor.sh
+
+super + shift + u
+    signals.sh
+
+super + w
+    firefox
+
+super + m
+    if wmctrl -l | grep -q "YouTube Music"; then wmctrl -a "YouTube Music"; else youtube-music; fi
+
+super + t
+    if wmctrl -l | grep -q "Discord"; then wmctrl -a "Discord"; else discord & sleep 3 && wmctrl -a "Discord"; fi
+
+super + v
+    clipmenu
+
+super + e
+    window_switcher.sh
+
+XF86AudioMute
+    wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle;
+
+XF86Calculator
+   st -e pulsemixer
+
+super + g
+    boomer > /dev/null 2>&1 &
+
+super + m
+    st -e sh -c dir-looker
